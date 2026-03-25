@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>theBoBaSenSei</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('4kWallpaper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #5d9eff;
+}
+header {
+  background: #3916ff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Pacifico', cursive;
+  cursor: pointer;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+header:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px #facc15, 0 0 25px #fbbf24;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+h2 {
+  border-left: 6px solid #065f46;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tab {
+  padding: 10px 20px;
+  background: #d1fae5;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.tab.active {
+  background: #065f46;
+  color: white;
+}
+.tab:hover {
+  background: #34d399;
+  color: white;
+}
+.banner {
+  position: relative;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  background: black;
+  cursor: pointer;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s;
+}
+.banner:hover img {
+  transform: scale(1.05);
+}
+.banner:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+  transform: scale(1.02);
+}
+.banner-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 15px;
+}
+.banner-section { display: none; opacity: 0; transform: translateX(20px); transition: all 0.4s ease; }
+.banner-section.active { display: block; opacity: 1; transform: translateX(0); }
+iframe { width: 100%; height: 400px; border-radius: 12px; }
+.blog-post { background: #ecfdf5; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #a7f3d0; }
+.side-decor { position: fixed; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 20px; }
+.side-left { left: 20px; }
+.side-right { right: 20px; }
+.decor-box { width: 80px; height: 80px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); background-size: cover; background-position: center; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+.decor-box:hover { transform: scale(1.1); box-shadow: 0 0 20px #facc15, 0 0 30px #fbbf24; }
+.social-buttons { display: flex; gap: 20px; justify-content: center; margin-bottom: 40px; }
+.social-buttons a { text-decoration: none; color: white; padding: 15px 25px; border-radius: 12px; font-weight: bold; transition: 0.3s; }
+.social-buttons a:hover { transform: scale(1.05); }
+.twitter { background: #1DA1F2; }
+.instagram { background: #C13584; }
+.tiktok { background: #000000; }
+</style>
+</head>
+
+<body>
+<header onclick="window.open('https://www.youtube.com/@theBoBaSenSei','_blank')">The BoBa SenSei</header>
+
+<!-- Chill LoFi Audio -->
+<audio id="lofiAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+
+<div class="side-decor side-left">
+  <div class="decor-box" style="background-image:url('Eula1.jpg')"></div>
+  <div class="decor-box" style="background-image:url('Eula2.jpg')"></div>
+  <div class="decor-box" style="background-image:url('Eula3.jpg')"></div>
+</div>
+<div class="side-decor side-right">
+  <div class="decor-box" style="background-image:url('Eula4.jpg')"></div>
+  <div class="decor-box" style="background-image:url('Eula5.jpg')"></div>
+  <div class="decor-box" style="background-image:url('Eula6.jpg')"></div>
+</div>
+
+<div class="container">
+<h2>🎰 Wish Banners</h2>
+<div class="tabs">
+  <div class="tab active" onclick="showTab('event', this)">Event</div>
+  <div class="tab" onclick="showTab('weapon', this)">Weapon</div>
+  <div class="tab" onclick="showTab('standard', this)">Standard</div>
+</div>
+<div id="event" class="banner-section active">
+  <div class="banner">
+    <img src="SkirkBanner.png">
+    <div class="banner-info"><b>Skirk Banner</b><br>⭐⭐⭐⭐⭐ Skirk<br>⭐⭐⭐⭐ Charlotte • Candace • Dahlia</div>
+  </div>
+  <div class="banner">
+    <img src="EscoffierBanner.png">
+    <div class="banner-info"><b>Escoffier Banner</b><br>⭐⭐⭐⭐⭐ Escoffier<br>⭐⭐⭐⭐ Charlotte • Candace • Dahlia</div>
+  </div>
+</div>
+<div id="weapon" class="banner-section">
+  <div class="banner">
+    <img src="Weapon.png">
+    <div class="banner-info"><b>Weapon Banner</b><br>⭐⭐⭐⭐⭐ Featured Weapons</div>
+  </div>
+</div>
+<div id="standard" class="banner-section">
+  <div class="banner">
+    <img src="standard.jpg">
+    <div class="banner-info"><b>Standard Banner</b><br>⭐⭐⭐⭐⭐ Diluc • Mona • Jean • Qiqi • Keqing</div>
+  </div>
+</div>
+
+<h2>📺 Latest Video</h2>
+<iframe src="https://www.youtube.com/embed/RrMxZuIB__w&t=4s"></iframe>
+<h2>📝 Blog</h2>
+<div class="blog-post">Welcome to My Page! This is a small Greetings test page I am making to support my content on YouTube by putting every social media links and such here!</div>
+
+<h2>🎧 Chill Lofi Stream</h2>
+<!-- Optional visible controls: <audio controls> -->
+<!-- Hidden autoplaying loop -->
+
+<h2>📱 Follow Me on Social Media</h2>
+<div class="social-buttons">
+  <a href="https://x.com/thebobasensei" target="_blank" class="twitter">Twitter</a>
+  <a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank" class="instagram">Instagram</a>
+  <a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank" class="tiktok">TikTok</a>
+</div>
+</div>
+
+<script>
+const switchSound = new Audio("https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3");
+function showTab(tab, el) {
+  document.querySelectorAll('.banner-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+  el.classList.add('active');
+  switchSound.currentTime = 0;
+  switchSound.play();
+}
+
+// Auto-play Lofi loop
+window.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('lofiAudio');
+  audio.play().catch(() => {
+    console.log('Autoplay blocked. Will start on first interaction.');
+  });
+  const startAudio = () => {
+    audio.play();
+    window.removeEventListener('click', startAudio);
+    window.removeEventListener('keydown', startAudio);
+  };
+  window.addEventListener('click', startAudio);
+  window.addEventListener('keydown', startAudio);
+});
+</script>
+</body>
+</html>
